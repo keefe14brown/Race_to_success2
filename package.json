@@ -12,6 +12,7 @@
     "render-if": "^0.1.1"
   },
   "scripts": {
+    "proxy": "http://localhost:8080",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

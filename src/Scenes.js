@@ -349,7 +349,7 @@ export let Scenes = {
 		}),
 			new LevelButton("Go Jason Bourne", (game) => {
 			game.nextLevel(Scenes.The_End);
-			game.detonateExplosives();
+			// game.detonateExplosives();
 		}),
 		], [['img', 'warriors2.gif']]),
 
