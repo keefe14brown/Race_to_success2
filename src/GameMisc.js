@@ -65,11 +65,12 @@ export class ActionButton extends Component {
 }
 
 // formerly GameTitle
-export class MainTitle extends Component {
-  render() {
-    return (<h5 id='level-title'>{this.props.text}</h5>)
-  }
-}
+// export class MainTitle extends Component {
+//   render() {
+//     return 
+//     (<h5 id='level-title'>{this.props.text}</h5>)
+//   }
+// }
 
 export class GameText extends Component {
   render() {

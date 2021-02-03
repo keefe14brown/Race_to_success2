@@ -30,7 +30,7 @@ export class Weapon extends Component {
 				id = 'weapon-item'>
 				<img src = {require('./item-images/267-0.png')} alt= " "/>
 				<h1>
-					Sword x {this.props.Weapon}
+					Knife x {this.props.Weapon}
 				</h1>
 				<input className = 'button' type = 'button' value = 'Equip' onClick={this.props.equipSword}/>
 				<input className = 'button' type = 'button' value = 'Throw Away' onClick={this.props.throwAway} />

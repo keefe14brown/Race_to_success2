@@ -319,9 +319,9 @@ class CreateCharacter extends Component {
 		if(currentFishSupply > 0){
 		this.setState(
 			{ Fish : currentFishSupply - 1,
-				HP : currentHP - 50 }
+				HP : currentHP + 30 }
 		)
-		alert('Who would have thought eating the poisonous blowfish would be poisonous? You lose 50 HP!')
+		alert('MMMMMMMM! This fish is delicious!')
 		}
 	}
 
@@ -331,9 +331,9 @@ class CreateCharacter extends Component {
 		if(currentFoodSupply > 0) {
 		this.setState(
 			{ Fish : currentFoodSupply - 1,
-			  HP : HP - 50  }
+			  HP : HP - 5  }
 		)
-		alert('Attempting to throw the blowfish agitates it, causing it to flail its poisonous quills into your face, damaging you by 50HP!')
+		alert("Don't waste perfectly good food!")
 		}
 
 	}
@@ -345,7 +345,7 @@ class CreateCharacter extends Component {
 		if(Weapon > 0){
 		this.setState(
 			{ equippedWeaponImage : imageOfaSword,
-				equippedWeaponName : 'Sword',
+				equippedWeaponName : 'Knife',
 			  Atk : Atk + 10,
 			 	Weapon : Weapon - 1 }
 		)}
