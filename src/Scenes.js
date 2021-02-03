@@ -36,18 +36,18 @@ export class SceneContainer extends React.Component {
 	}
 }
 
-export var Scenes = {
+export let Scenes = {
 
 	Cave: new Scene('Cave', (game) => {
 		if (game.race === "Undead") {
-			let text = "You wake up in a dark cave, your eternal resting place. Your resurrection is the result of some unfinished business, as it always is with the Undead.";
+			let text = "Infamous Finance giants, Randolph and Mortimer Duke are the richest men in America. They often find themselves bored with dominating the world through investments and finance.  One day Mortimer has an exciting idea.......";
 			return text;
 		} else {
-			let text = "You wake up in a dark cave. Your memory is a bit hazy and your head aches similarly to when one has a hangover.";
+			let text = "Infamous Finance giants, Randolph and Mortimer Duke are the richest men in America. They often find themselves bored with dominating the world through investments and finance.  One day Mortimer has an exciting idea.......";
 			return text;
 		}
 	}, [
-		new LevelButton("Don't drink...",
+		new LevelButton("continue",
 			(game) => {
 				game.nextLevel(Scenes.Sobriety);
 			},
@@ -61,32 +61,32 @@ export var Scenes = {
 				}
 			}
 		),
-		new LevelButton("Don't drink...anymore", (game) => {
-			game.nextLevel(Scenes.Been_Clean);
-			},
-			(game) => {
-				if (game.race === "Undead") {
-					this.showButton=false;
-					return this.showButton;
-				} else {
-					this.showButton=true;
-					return this.showButton;
-				}
-			}
-		),
-		new LevelButton("Had one too many", (game) => {
-			game.nextLevel(Scenes.Bad_Choices);
-			},
-			(game) => {
-				if (game.race === "Undead") {
-					this.showButton=false;
-					return this.showButton;
-				} else {
-					this.showButton=true;
-					return this.showButton;
-				}
-			}
-		),
+		// new LevelButton("what did they do?", (game) => {
+		// 	game.nextLevel(Scenes.Been_Clean);
+		// 	},
+		// 	(game) => {
+		// 		if (game.race === "Undead") {
+		// 			this.showButton=false;
+		// 			return this.showButton;
+		// 		} else {
+		// 			this.showButton=true;
+		// 			return this.showButton;
+		// 		}
+		// 	}
+		// ),
+		// new LevelButton("Had one too many", (game) => {
+		// 	game.nextLevel(Scenes.Bad_Choices);
+		// 	},
+		// 	(game) => {
+		// 		if (game.race === "Undead") {
+		// 			this.showButton=false;
+		// 			return this.showButton;
+		// 		} else {
+		// 			this.showButton=true;
+		// 			return this.showButton;
+		// 		}
+		// 	}
+		// ),
 		new LevelButton("Gather bearings", (game) => {
 			game.nextLevel(Scenes.Condition);
 			},
@@ -100,24 +100,24 @@ export var Scenes = {
 				}
 			}
 		),
-		new LevelButton("Onward to adventure!", (game) => {
+		new LevelButton("Skip The Intro", (game) => {
 			game.nextLevel(Scenes.Outside_Now);
 		}),
-	], [['img', 'startercave.jpg']]),
+	], [['img', 'Tradingplaces5.jpg']]),
 
 
 	Sobriety: new Scene('Cave', (game) => {
-		let text = "'So this is what a hangover feels like.' However, what you really want to know is how you ended up in this cave. You have not sustained any injuries, so you suspect foul play.";
+		let text = "MORTIMER: 'Randolph! RANDOLPH!!! Lets play a game!'  RANDOLPH: 'I'm listening Mortimer.' MORTIMER: 'How about we find a person, broke and struggling, and kickstart their career...just throw them into the world and see what happens, see what they do with it!'  RANDOLPH: 'Brilliant idea Mortimer! I have an idea as well my good sir. The first to earn 1 million dollars, will be the winner!  The prize will be the Waldorf Mansion & All the money earned!!!' Mortimer: 'I know exactly where to find our guy.......'"
 
 		return text;
 	}, [
-		new LevelButton('Try to recall', (game) => {
+		new LevelButton('BEGIN', (game) => {
 			game.nextLevel(Scenes.Remember);
 		}),
-		new LevelButton("Onward to adventure!", (game) => {
-			game.nextLevel(Scenes.Outside_Now);
-		})
-		], [['img', 'knight.jpg']]),
+		// new LevelButton("Onward to adventure!", (game) => {
+		// 	game.nextLevel(Scenes.Outside_Now);
+		// })
+		], [['img', 'tradingplaces2.png']]),
 
 
 	Been_Clean: new Scene('Cave', (game) => {
@@ -125,13 +125,13 @@ export var Scenes = {
 
 		return text;
 	}, [
-		new LevelButton('Try to recall', (game) => {
+		new LevelButton('Continue', (game) => {
 			game.nextLevel(Scenes.Remember);
 		}),
 		new LevelButton("Onward to adventure!", (game) => {
 			game.nextLevel(Scenes.Outside_Now);
 		})
-		], [['img', 'knight.jpg']]),
+		], [['img', 'buddyincar.jpg']]),
 
 
 	Bad_Choices: new Scene('Cave', (game) => {
@@ -139,66 +139,66 @@ export var Scenes = {
 
 		return text;
 	}, [
-		new LevelButton('Try to recall', (game) => {
+		new LevelButton('Continue', (game) => {
 			game.nextLevel(Scenes.Remember);
 		}),
 		new LevelButton("Onward to adventure!", (game) => {
 			game.nextLevel(Scenes.Outside_Now);
 		})
-		], [['img', 'knight.jpg']]),
+		], [['img', 'buddyincar.jpg']]),
 
 	Condition: new Scene('Cave', (game) => {
 		let text = "Judging by how many bones protrude from your rotting flesh, you have been dead for a few weeks. Your inventory is full of the items you were buried with. You have retained few memories from your time among the living other than the memories connected to your unfinished business."
 		return text;
 	}, [
-		new LevelButton('Try to recall', (game) => {
+		new LevelButton('Continue', (game) => {
 			game.nextLevel(Scenes.Remember);
 		}),
 		new LevelButton("Onward to adventure!", (game) => {
 			game.nextLevel(Scenes.Outside_Now);
 		})
-		], [['img', 'skelington.jpg']]),
+		], [['img', 'buddyincar.jpg']]),
 
 	Remember: new Scene('Cave', (game) => {
 		if (game.race === "Undead") {
 			let text = "You lived as a simple retired mercenary. You spent your time looking for odd jobs in the land of Ulmeyda until your death in the year 108 of our Lord Cloudman's reign when you were killed in a duel against Bert the Ruthless. Your death was an honorable one, yet something else has rekindled your soul...";
 			return text;
 		} else {
-			let text = "You aren't sure how long you've been out, but your inventory is the same as you left it. You are certain that the year is 108 of our Lord Cloudman's reign, you live in the land of Ulmeyda, and you are a simple retired mercenary looking for odd jobs. Otherwise, the last memory you have before blacking out is of checking your empty pockets at the market which made you think of...";
+			let text = "A limo suddenly pulls up beside you. Two sharply dressed man wave you into the car, offering a opportunity for a new shot at life!";
 			return text;
 		}
 	}, [
-		new LevelButton("...", (game) => {
+		new LevelButton("Continue", (game) => {
 			game.nextLevel(Scenes.Gerald);
 		})
-		], [['img', 'startercave.jpg']]),
+		], [['img', 'buddyincar.jpg']]),
 
 
 	Gerald: new Scene('Cave', (game) => {
 		if (game.race === "Undead") {
-			let text = "...that goddamn Gerald the Spineless. That guy owes you $14. He said he'd pay you back before your duel in case you didn't survive, but that bum blew you off. Your eternal soul will not be able to rest until you reclaim the honor and glory of your $14 legacy!";
+			let text = "The car pulls over and you're dumped out into the street.  The Duke brother's tell you.  if you can survive and earn your way to 1 million dollars they will make you rich for the rest of your life.";
 			return text;
 		} else {
-			let text = "...that goddamn Gerald the Spineless. That guy owes you $14. He said he'd pay you back, but that was like forever ago. Your purpose is now clear, inspiring you to blaze a tireless trail through out the land searching for the subject of your hatred: Gerald and his bullshit.";
+			let text = "The car pulls over and you're dumped out into the street.  The Duke brother's tell you.  if you can survive and earn your way to 1 million dollars they will make you rich for the rest of your life.";
 			return text;
 		}
 
 	}, [
-		new LevelButton("Leave the cave, find Gerald", (game) => {
+		new LevelButton("Continue", (game) => {
 			game.nextLevel(Scenes.Outside);
 		})
-		], [['img', 'gerald.jpg']]),
+		], [['img', 'bilyrayhomeles.jpg']]),
 
 
 	Outside: new Scene('Outside of the cave', (game) => {
-		let text = "As you exit the cave, the bright change in light causes you to wince. As your vision adjusts, you realize you aren't sure where you are in Ulmeyda. Thankfully, a town is visible from where you stand.";
+		let text = "You get to your feet and head off down the grimey NYC streets, in search of your next move.";
 
 		return text;
 	}, [
 		new LevelButton('Head towards town', (game) => {
 			game.nextLevel(Scenes.First_Encounter);
 		}),
-	], [['img', 'outside.jpg']]),
+	], [['img', 'tradingplacesstreet.jpg']]),
 
 
 	Outside_Now: new Scene('Outside of the cave', (game) => {
@@ -209,11 +209,11 @@ export var Scenes = {
 		new LevelButton('Head towards the town', (game) => {
 			game.nextLevel(Scenes.First_Encounter);
 		}),
-	], [['img', 'outside.jpg']]),
+	], [['img', 'tradingplacesnight.jpg']]),
 
 
 	First_Encounter: new Scene('ENCOUNTER!', (game) => {
-		let text = "As you begin to leave an enemy encounters you. It's a one-legged frog approaching with a loaded musket and a crutch. Don't count this amphibian out though, it has seen some battles, it has been in the trenchs. The frog on his last leg in it for one more battle, and you better prepare yourself.";
+		let text = "A mugger starts harrassing you in the allyway. You try to shrug him off but he wants a fight!";
 
 		return text;
 	}, [
@@ -224,17 +224,17 @@ export var Scenes = {
 			game.nextLevel(Scenes.Coward);
 			game.froggo(49);
 		}),
-	], [['img', 'froggo.jpg']]),
+	], [['img', 'fightscene.gif']]),
 
 	Coward: new Scene('ENCOUNTER!', (game) => {
-		let text = "Fearless Frog leans against his crutch, aghast as you bolt away from him. He shoots you in the back of the head for dissapointing everyone. You take 49 points of damage.";
+		let text = "He chases you out the alley way, throwing bottles, and threatening to get you next time!";
 
 		return text;
 	}, [
 		new LevelButton('Engage', (game) => {
 			game.nextLevel(Scenes.Shop);
 		})
-	], [['img', 'travel.gif']]),
+	], [['img', 'warriorscharacter.gif']]),
 
 	Fight1: new Scene('Battle!', (game) => {
 		if (Scenes.Fight1.playerVisitedCounter === 1) {

@@ -77,15 +77,13 @@ class CreateCharacter extends Component {
 			<div
 				className = 'CreateCharacter'
 				>
-			<h1>Create Character</h1>
+			<span className = 'gameheading'><h1 style={{color: "darkred"}}>RACE TO SUCCESS!</h1></span>
+			
 			<label>Character Name :</label>
 			<input type = 'text' value={this.state.playerName} onChange = {this.handleChangeName} /><br/>
 			<label>Race : </label><input list='races' name='availableRaces' onChange={this.chooseRace}/>
 				<datalist id="races">
     				<option value="Human">Human</option>
-    				<option value="Undead">Undead</option>
-    				<option value="Elf">Elf</option>
-    				<option value="Orc">Orc</option>
   				</datalist> <br/>
 
 			<label>Gender :</label><input list='genders' name='availableGenders' onChange = {this.changeGender} />
@@ -100,14 +98,11 @@ class CreateCharacter extends Component {
 				className = {this.state.isBlinking ? 'hide' : 'view'}
 				onLoad={this.blinky()}
 				>
-				PRESS START
+				PRESS ENTER TO BEGIN
 			</div>
 			<div
 				id = 'Creators'>
-				<h3>Design Team:</h3>
-						<h4>Sean</h4>
-						<h4>Ajax</h4>
-						<h4>Miko</h4>
+				<h3>Designed by ~ Keefe B</h3>
 			</div>
 			<GameContainer
 				wallet = {this.state.wallet}

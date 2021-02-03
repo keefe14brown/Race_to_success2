@@ -1,13 +1,23 @@
 html {
-	background-color: #3498DB;
+	background-color: #d69302;
+}
+
+.gameheading {
+	display: inline-block;
+	position: fixed;
+	text-shadow: black 3px 3px;
+	top: 0%;
+	left: 27%;
+	font-size: 250%;
+	font-weight: 900;
 }
 
 .CreateCharacter {
 	display: inline-block;
 	position: fixed;
 	font-family: '8BIT WONDER';
-	top: 50%;
-	left: 50%;
+	top: 55%;
+	left: 47%;
 	margin-top: -100px;
 	margin-left: -225px;
 }
@@ -24,7 +34,7 @@ html {
 
 #equipment-tab {
 	font-family: '8BIT WONDER';
-	background-color: black;
+	background-color: rgb(88, 4, 4);
 	border: 2px solid;
 	position: fixed;
 	right: 0%;
@@ -45,7 +55,7 @@ html {
 
 #ItemWindow {
 	font-family: '8BIT WONDER';
-	background-color: black;
+	background-color: rgb(88, 4, 4);
 	border: 2px solid;
 	position: fixed;
 	right: 0%;
@@ -176,8 +186,11 @@ label {
 }
 
 #blinker {
-	text-align: center;
+	display: inline-block;
+	position: fixed;
 	font-size: 30px;
+	top: 60%;
+	left: 38%;
 }
 
 .box {
@@ -196,7 +209,7 @@ label {
 	justify-content: space-between;
 	border: 2px solid ;
 	font-family: '8BIT WONDER';
-	background-color: black;
+	background-color: rgb(219, 118, 2);
 	border-radius: 15px;
 }
 
@@ -251,7 +264,7 @@ label {
 	max-width: 1100px;
 	height: 60%;
 	border-radius: 15px;
-	background-color: black;
+	background-color: rgb(190, 93, 2);
 	margin-left: 1.5% ;
 
 }
@@ -268,11 +281,11 @@ label {
 
 .button-display {
 	display: inline-block;
-	outline: 2px solid black;
+	outline: 2px solid rgb(214, 116, 4);
 	margin-right: 5%;
 	height: 30%;
 	width: 50%;
-	background-color: red;
+	background-color: rgb(138, 4, 4);
 }
 
 .SceneContainer #level-image {
@@ -290,7 +303,7 @@ label {
 }
 
 #contains-game {
-	background-color: black;
+	background-color: rgb(5, 4, 3);
 	color: white;
 	position: fixed;
 	top: 0px;

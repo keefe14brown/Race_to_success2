@@ -20,10 +20,10 @@ class Inventory extends Component {
 						Weapon = {this.props.Weapon}
 						equipSword = {this.props.equipSword}
 						/>
-					<Armor
+					{/* <Armor
 						Armor = {this.props.Armor}
 						equipArmor = {this.props.equipArmor}
-					 	/>
+					 	/> */}
 					<Bread
 						Bread = {this.props.Bread}
 						useBread = {this.props.useBread}
@@ -34,11 +34,11 @@ class Inventory extends Component {
 						useFish = {this.props.useFish}
 						throwAwayFish = {this.props.throwAwayFish}
 						/>
-					<Explosives
+					{/* <Explosives
 						Explosives = {this.props.Explosives}
 						detonateExplosives = {this.props.detonateExplosives}
 						throwAwayExplosives = {this.props.throwAwayExplosives}
-						/>
+						/> */}
 					<Detonator
 						Detonator = {this.props.Detonator}
 						detonatorCurrentState = {this.props.detonatorState}
